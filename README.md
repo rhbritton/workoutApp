@@ -1,2 +1,2 @@
-# workoutApp
-Creates a workout plan based on what your goals are
+# Workout App
+Builds a workout plan for you based on what your goals are.
