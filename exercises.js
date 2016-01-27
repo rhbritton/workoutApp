@@ -27,3 +27,34 @@ exercises.CHEST = {
 		"Arm Swings"
 	]
 }
+
+exercises.SHOULDERS = {
+	"warmUps": [
+		"Shoulder Rolls",
+		"Pike Press",
+		"Jumping Jacks",
+		"Arm Circles"
+	],
+	"exercises": [
+		"Military Press",
+		"Close Military Press",
+		"Wide Military Press",
+		"Elevated Psuedo Handstand Push Up",
+		"Elevated Lopsided Psuedo Handstand Push Up",
+		"Vertical Dumbbell Rows",
+		"Frontal Deltoid Raises",
+		"Side Deltoid Raises",
+		"Shrugs",
+		"Arnold Dumbbell Press",
+		"Dumbbell Clean and Press",
+		"Handstand Hold",
+		"Reverse Bent Arm Flys",
+		"Reverse Straight Arm Flys"
+	],
+	"stretches": [
+		"Arm Across Body",
+		"Arm Over and Down Back",
+		"Hold Door and Twist",
+		"Touch Hands Behind Back"
+	]
+}

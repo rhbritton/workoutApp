@@ -14,5 +14,5 @@ store.subscribe(() =>
 
 // The only way to mutate the internal state is to dispatch an action. 
 // The actions can be serialized, logged or stored and later replayed. 
-store.dispatch({ type: 'BUILD_WORKOUT', options:{ types: ['CHEST'] } })
+store.dispatch({ type: 'BUILD_WORKOUT', options:{ types: ['CHEST', 'SHOULDERS'] } })
 console.log(store.getState())

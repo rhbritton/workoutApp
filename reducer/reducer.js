@@ -26,7 +26,7 @@ function buildWorkout(state, options) {
 
 	var muscleGroups = []
 	options.types.forEach(function(type) {
-		muscleGroups.push(exercises[options.types[0]])
+		muscleGroups.push(exercises[type])
 	})
 
 	var completeWorkout = addExercises(muscleGroups)
@@ -43,6 +43,8 @@ function buildWorkout(state, options) {
 		  , coolDownTime = 2+Math.floor(Math.random()*3)
 
 		while(timeTaken < options.workoutTime) {
+			console.log(muscleGroups)
+			console.log(randomIndex(muscleGroups))
 			var muscleGroup = muscleGroups[randomIndex(muscleGroups)]
 			
 			if(timeTaken < warmUpTime) {
