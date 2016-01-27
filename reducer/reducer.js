@@ -10,15 +10,31 @@
 * follows a different convention (such as function maps) if it makes sense for your project.
 */
 
-import { exercises } from '../exercises'
+import { exercises } from '../data/exercises'
 
-export function reducer(state = {}, action) {
+export function reducer(state = { page:0 }, action) {
 	switch (action.type) {
 		case 'BUILD_WORKOUT':
 			return buildWorkout(state, action.options)
+		case 'NEXT_PAGE':
+			return nextPage(state, action)
+		case 'PREVIOUS_PAGE':
+			return previousPage(state, action)
 		default:
 			return state
 	}
+}
+
+function nextPage(state, action) {
+	if(state.page >= 4) return { page:state.page }
+
+	return { page:state.page+1 }
+}
+
+function previousPage(state, action) {
+	if(state.page <= 0) return { page:state.page }
+
+	return { page:state.page-1 }
 }
 
 function buildWorkout(state, options) {
@@ -43,8 +59,6 @@ function buildWorkout(state, options) {
 		  , coolDownTime = 2+Math.floor(Math.random()*3)
 
 		while(timeTaken < options.workoutTime) {
-			console.log(muscleGroups)
-			console.log(randomIndex(muscleGroups))
 			var muscleGroup = muscleGroups[randomIndex(muscleGroups)]
 			
 			if(timeTaken < warmUpTime) {
@@ -58,7 +72,10 @@ function buildWorkout(state, options) {
 				var sets = calcSets()
 				  , reps = calcReps()
 				  , rest = calcRest()
-				  , exercise = muscleGroup.exercises[randomIndex(muscleGroup.exercises)]
+
+				var exerciseIndex = randomIndex(muscleGroup.exercises)
+				var subExerciseIndex = randomIndex(muscleGroup.exercises[exerciseIndex])
+				var exercise = muscleGroup.exercises[exerciseIndex][subExerciseIndex]
 
 				timeTaken += sets*2
 

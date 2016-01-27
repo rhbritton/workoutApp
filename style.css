@@ -1,3 +1,63 @@
 body {
 	background-color:#eee;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+}
+
+.start, .next, .back {
+	margin: 0;
+	padding: 0;
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	width: 100%;
+	height: 1.75em;
+	background-color: #048E04;
+	color: #eee;
+	font-size: 1.5em;
+	outline: none;
+	border: none;
+}
+.start:hover, .next:hover {
+	background-color: #0EB20E;
+}
+
+.next {
+	width: 50%;
+	left: 50%;
+}
+.back {
+	width: 50%;
+	left: 0;
+	background-color: #666;
+}
+.back:hover {
+	background-color: #777;
+}
+
+.select {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.option {
+	width: 7em;
+	height: 7em;
+	background-color: #09c;
+	color: white;
+	border-radius: 7em;
+	display: inline-block;
+	margin: 1em;
+	cursor: pointer;
+	transition: all 0.25s;
+}
+.option:hover {
+	background-color: #888;
+}
+
+.option div {
+	margin-top: 2.75em;
 }

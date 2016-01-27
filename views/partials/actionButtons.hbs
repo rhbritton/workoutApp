@@ -1,0 +1,9 @@
+{{#if start}}
+	<button class="start" data-action="nextPage">Start</button>
+{{else if end}}
+	<button class="back" data-action="previousPage">Back</button>
+	<button class="next" data-action="generate">Generate</button>
+{{else}}
+	<button class="back" data-action="previousPage">Back</button>
+	<button class="next" data-action="nextPage">Next</button>
+{{/if}}
